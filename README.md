@@ -14,13 +14,14 @@ The following libraries and frameworks are included:
 - requirejs
 - jQuery
 - Modernizr
+- Handlebars
 - Underscore
 - Backbone
 - Bootstrap
 
 ## Commands
 
-The project comes with a basic make file. Commands include:
+The project comes with some basic terminal commands. Commands include:
 
 - `make compile` - compiles and minifies all assets (compiles LESS and minifies
   CSS and JS files)
@@ -30,3 +31,10 @@ The project comes with a basic make file. Commands include:
     - The CSS and JS minified assets
     - `main.js` - any reference to the project.js
     - `index.html` - reference to the stylesheet
+
+## Dependencies
+
+- UglifyJS2
+- lessc
+- yui-compressor
+- watchr
