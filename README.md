@@ -5,7 +5,8 @@ Better documentation to come.
 
 ## Introduction
 
-Get started with a front-end prototype quickly
+Get started with a front-end prototype quickly. Start by running `make define
+name=[project-title]`
 
 ## Libraries
 
