@@ -24,6 +24,8 @@ The following libraries and frameworks are included:
 
 The project comes with some basic terminal commands. Commands include:
 
+- `make copy` - copys all the minimum assets from the `src/components` folder into
+  the `site/media/lib` folder
 - `make compile` - compiles and minifies all assets (compiles LESS and minifies
   CSS and JS files)
 - `make define name=[PROJECT NAME]` - adjusts all asset files to be the project
@@ -39,3 +41,4 @@ The project comes with some basic terminal commands. Commands include:
 - lessc
 - yui-compressor
 - watchr
+- bower

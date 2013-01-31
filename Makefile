@@ -74,6 +74,16 @@ compile:
 	@echo "All assets successfully compiled at ${DATE}."
 	@echo "${DR}\n"
 
+
+#
+# UNINSTALL
+# Variables include: package; `make uninstall package=foo`
+#
+
+uninstall:
+	@rm -rf ${LIB}${package}
+	@echo "${package} removed at ${DATE}."
+
 #
 # DEFINE
 # Variables include: name; `make define name=foo`
