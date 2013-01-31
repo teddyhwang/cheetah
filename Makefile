@@ -1,14 +1,21 @@
 PROJECTNAME = cheetah
 MEDIA       = ./site/media/
+
 LIB         = ${MEDIA}lib/
 SRC         = ./src/components/
+
 LESS        = ${MEDIA}less/${PROJECTNAME}.less
+
 CSS         = ${MEDIA}css/${PROJECTNAME}.css
 CSS_MIN     = ${MEDIA}css/${PROJECTNAME}.min.css
+
 JS          = ${MEDIA}js/${PROJECTNAME}.js
 JS_MIN      = ${MEDIA}js/${PROJECTNAME}.min.js
+
 DATE        = $(shell date +%I:%M%p)
+
 CHECK       = \033[32m✔\033[39m
+
 HR          =-------------------------------------------------------
 DR          ========================================================
 
@@ -91,10 +98,10 @@ define:
 	@mv ${JS} ${MEDIA}js/${name}.js
 	@mv ${JS_MIN} ${MEDIA}js/${name}.min.js
 	@echo "Updating JS file names...                   ${CHECK} Done"
-	@sed -i '' "s/${PROJECTNAME}\.min\.css/${name}\.min\.css/" index.html
-	@sed -i '' "s/${PROJECTNAME}/${name}/g" media/js/main.js
+	@sed -i '' "s/${PROJECTNAME}\.min\.css/${name}\.min\.css/" site/index.html
+	@sed -i '' "s/${PROJECTNAME}/${name}/g" site/media/js/main.js
 	@echo "Updating index.html and main.js...          ${CHECK} Done\n"
-	@sed -i '' "s/${PROJECTNAME}/${name}/g" watchr.rb
+	@sed -i '' "s/${PROJECTNAME}/${name}/g" less_watchr.rb
 	@echo "Updating watchr.rb file...                  ${CHECK} Done"
 	@echo "\n${HR}"
 	@echo "Project renamed to ${name} at ${DATE}."
@@ -115,10 +122,10 @@ define:
 	@mv ${JS} ${MEDIA}js/${name}.js
 	@mv ${JS_MIN} ${MEDIA}js/${name}.min.js
 	@echo "Updating JS file names...                   ${CHECK} Done"
-	@sed "s/${PROJECTNAME}\.min\.css/${name}\.min\.css/" -i index.html
-	@sed "s/${PROJECTNAME}/${name}/g" -i media/js/main.js
+	@sed "s/${PROJECTNAME}\.min\.css/${name}\.min\.css/" -i site/index.html
+	@sed "s/${PROJECTNAME}/${name}/g" -i site/media/js/main.js
 	@echo "Updating index.html and main.js...          ${CHECK} Done\n"
-	@sed "s/${PROJECTNAME}/${name}/g" -i watchr.rb
+	@sed "s/${PROJECTNAME}/${name}/g" -i less_watchr.rb
 	@echo "Updating watchr.rb file...                  ${CHECK} Done"
 	@echo "\n${HR}"
 	@echo "Project renamed to ${name} at ${DATE}."
