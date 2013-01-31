@@ -1,5 +1,7 @@
 PROJECTNAME = cheetah
 MEDIA       = ./site/media/
+LIB         = ${MEDIA}lib/
+SRC         = ./src/components/
 LESS        = ${MEDIA}less/${PROJECTNAME}.less
 CSS         = ${MEDIA}css/${PROJECTNAME}.css
 CSS_MIN     = ${MEDIA}css/${PROJECTNAME}.min.css
@@ -13,6 +15,36 @@ DR          ========================================================
 
 PLATFORM    = $(shell uname)
 
+
+#
+# BUILD
+#
+#
+
+copy:
+	@echo
+	@echo "\n${DR}"
+	@echo "Copying assets..."
+	@echo "${HR}\n"
+	@cp -f ${SRC}backbone/backbone* ${LIB}backbone/.
+	@echo "Copying backbone...    ${CHECK} Done"
+	@cp -f ${SRC}bootstrap/docs/assets/css/bootstrap* ${LIB}bootstrap/css/.
+	@cp -f ${SRC}bootstrap/docs/assets/js/bootstrap.* ${LIB}bootstrap/js/.
+	@cp -f ${SRC}bootstrap/docs/assets/img/glyphicons* ${LIB}bootstrap/img/.
+	@echo "Copying bootstrap...   ${CHECK} Done"
+	@cp -f ${SRC}handlebars/handlebars* ${LIB}handlebars/.
+	@echo "Copying handlebars...  ${CHECK} Done"
+	@cp -f ${SRC}jquery/jquery* ${LIB}jquery/.
+	@echo "Copying jquery...      ${CHECK} Done"
+	@cp -f ${SRC}modernizr/modernizr* ${LIB}modernizr/.
+	@echo "Copying modernizr...   ${CHECK} Done"
+	@cp -f ${SRC}requirejs/require* ${LIB}requirejs/.
+	@echo "Copying requirejs...   ${CHECK} Done"
+	@cp -f ${SRC}underscore/underscore* ${LIB}underscore/.
+	@echo "Copying underscore...  ${CHECK} Done"
+	@echo "\n${HR}"
+	@echo "All assets successfully copied at ${DATE}."
+	@echo "${DR}\n"
 
 #
 # COMPILE
