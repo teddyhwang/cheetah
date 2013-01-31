@@ -30,7 +30,9 @@ copy:
 	@echo "Copying backbone...    ${CHECK} Done"
 	@cp -f ${SRC}bootstrap/docs/assets/css/bootstrap* ${LIB}bootstrap/css/.
 	@cp -f ${SRC}bootstrap/docs/assets/js/bootstrap.* ${LIB}bootstrap/js/.
-	@cp -f ${SRC}bootstrap/docs/assets/img/glyphicons* ${LIB}bootstrap/img/.
+	@cp -f ${SRC}bootstrap/less/mixins.* ${LIB}bootstrap/less/.
+	@cp -f ${SRC}bootstrap/less/variables.* ${LIB}bootstrap/less/.
+	@cp -f ${SRC}bootstrap/docs/assets/img/glyphicons* ${MEDIA}img/.
 	@echo "Copying bootstrap...   ${CHECK} Done"
 	@cp -f ${SRC}handlebars/handlebars* ${LIB}handlebars/.
 	@echo "Copying handlebars...  ${CHECK} Done"
