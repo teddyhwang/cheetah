@@ -55,6 +55,7 @@ copy:
 	@echo "All assets successfully copied at ${DATE}."
 	@echo "${DR}\n"
 
+
 #
 # COMPILE
 # requires uglifyjs2, lessc and yui-compressor
@@ -74,15 +75,6 @@ compile:
 	@echo "All assets successfully compiled at ${DATE}."
 	@echo "${DR}\n"
 
-
-#
-# UNINSTALL
-# Variables include: package; `make uninstall package=foo`
-#
-
-uninstall:
-	@rm -rf ${LIB}${package}
-	@echo "${package} removed at ${DATE}."
 
 #
 # DEFINE
@@ -142,3 +134,27 @@ define:
 	@echo "${DR}\n"
 
 endif
+
+
+#
+# Remove
+# Variables include: package; `make uninstall package=foo`
+#
+
+remove:
+	@rm -rf site/media/lib/${package}
+	@echo "${package} removed at ${DATE}."
+
+
+#
+# UNINSTALL
+# Apply this when you have all the packages you want and want to remove this
+# Makefile and all the other junk
+#
+
+uninstall:
+	@rm -rf ./src
+	@rm -rf ./Makefile
+	@rm -rf ./less_watchr.rb
+	@echo "Cheetah cleaned up and uninstalled"
+
