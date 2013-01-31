@@ -1,5 +1,5 @@
 PROJECTNAME = cheetah
-MEDIA       = ./media/
+MEDIA       = ./site/media/
 LESS        = ${MEDIA}less/${PROJECTNAME}.less
 CSS         = ${MEDIA}css/${PROJECTNAME}.css
 CSS_MIN     = ${MEDIA}css/${PROJECTNAME}.min.css

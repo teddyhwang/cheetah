@@ -1,9 +1,9 @@
 def compile_less
-    %x[lessc media/less/cheetah.less media/css/cheetah.css]
+    %x[lessc site/media/less/cheetah.less site/media/css/cheetah.css]
 end
 
 def minify_css
-    %x[lessc media/less/cheetah.less media/css/cheetah.min.css --yui-compress]
+    %x[lessc site/media/less/cheetah.less site/media/css/cheetah.min.css --yui-compress]
 end
 
 def update_terminal(message)
