@@ -1,6 +1,8 @@
 Cheetah - Rapid Prototyping
 ===========================
 
+## UNDER HEAVY CONSTRUCTION - highly recommend you do not use yet.
+
 Better documentation to come.
 
 ## Introduction
